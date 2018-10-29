@@ -1,0 +1,110 @@
+.portfolio {
+    // display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top right, #8a2387, #e94057, #f27121);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    transform: translateY(100%);
+    
+
+
+
+    &__projects-container {
+        border: 4px solid red;
+        margin: 15rem 3rem;
+        padding: 1.5rem;
+        height: 55%;
+
+        &__project-title {
+            text-align: center;
+        }
+
+        &__controller {
+            display: block;
+            text-align: center;
+            margin: 3vh auto;
+        }
+
+        &__boxes-container {
+            display: inline-block;
+            width: 100%;
+            height: 65%;
+            border: 2px solid black;
+            margin: 1.5rem auto;
+            border: 2px solid yellow;
+        }
+
+        .box {
+            border: 2px solid red;
+            width: 100%;
+            height: 100%;
+        }
+
+        &__box-1 {
+            background-image: url("/img/header-4.jpeg");
+            background-size: contain;
+        }
+
+        &__box-2 {
+            display: none;
+            background: rebeccapurple;
+            visibility: hidden;
+            position: absolute
+        }
+
+        &__box-3 {
+            display: none;
+            background: rebeccapurple;
+            visibility: hidden;
+            position: absolute
+        }
+
+        &__box-4 {
+            display: none;
+            background: rebeccapurple;
+            visibility: hidden;
+            position: absolute
+        }
+
+        &__box-5 {
+            display: none;
+            background: rebeccapurple;
+            visibility: hidden;
+            position: absolute
+        }
+
+        &__box-6 {
+            display: none;
+            background: rebeccapurple;
+            visibility: hidden;
+            position: absolute
+        }
+    }
+
+
+
+
+}
+
+#portfolio-nav:hover {
+    // z-index: 1;
+    border: 10px solid darkcyan;
+}
+
+.shown {
+    z-index: 2;
+    transform: translateY(0);
+    transition: 2s;
+}
+
+.hidden {
+    z-index: -1;
+    transform: translateY(100%);
+    transition: 2s;
+
+}

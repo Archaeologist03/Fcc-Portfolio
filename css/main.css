@@ -1,0 +1,228 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  font-family: 'K2D', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+  min-height: 100%; }
+
+body {
+  box-sizing: border-box;
+  min-height: 100%; }
+
+@keyframes foging {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(-200vw, 0, 0); } }
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden; }
+
+.home-logo__link {
+  position: fixed;
+  top: .5%;
+  left: 2%;
+  z-index: 10;
+  overflow: hidden;
+  border-radius: 25%;
+  width: 5.3rem;
+  height: 5.1rem;
+  transition: transform 1.2s;
+  transition-timing-function: cubic-bezier(0.55, 0.55, 0.28, 0.7); }
+  .home-logo__link:hover {
+    transform: rotateZ(-360deg) scale(1.1); }
+  .home-logo__link img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    overflow: hidden; }
+  .home-logo__link img:hover {
+    background-color: rgba(122, 202, 17, 0.24);
+    border-radius: 25%;
+    transition: transform 1.5s, background-color 1s, opacity 0.5s;
+    transition-timing-function: ease-out;
+    border: 1px solid rgba(43, 12, 129, 0.1); }
+
+.navigation {
+  font-size: 1.5rem;
+  position: fixed;
+  top: 0;
+  right: 0%;
+  z-index: 10;
+  width: 75%;
+  perspective: 75rem;
+  perspective-origin: right; }
+  .navigation__list {
+    list-style: none;
+    transform: rotateY(-7deg);
+    margin-top: .3rem; }
+  .navigation__list::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .navigation__item {
+    background-color: rgba(255, 235, 205, 0.301);
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 4px 8px 10px rgba(78, 28, 28, 0.705);
+    border: 5px solid transparent;
+    border-radius: 5px;
+    border-left: 3px solid rgba(124, 95, 204, 0.836);
+    transform: rotateY(-5deg) rotateZ(1deg);
+    transition: border-left .5s, border-bottom 2s, border-right 1s, border-top 3s, box-shadow .3s, background-color .7s, transform 1.5s; }
+    .navigation__item:hover {
+      border-left: 5px solid #c8f890;
+      border-bottom: 5px solid #5ef5b6;
+      border-right: 5px solid #9232e0;
+      border-top: 5px solid #ff0f87;
+      box-shadow: 2px 6px 5px rgba(78, 28, 28, 0.705);
+      background-color: transparent;
+      transform: rotateY(10deg) rotateZ(-1deg); }
+    .navigation__item:hover + .navigation__item {
+      border-left: 3px solid transparent; }
+  .navigation__link {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    font-size: 2.2rem;
+    background-image: -webkit-linear-gradient(#8d0286, #087a2e);
+    background-image: linear-gradient(#8d0286, #087a2e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent; }
+
+.fog-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden; }
+  .fog-container .fog-img {
+    position: absolute;
+    height: 100vh;
+    width: 300vw; }
+  .fog-container__fog-1 {
+    background: url("/img/fog-1.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    animation: foging 60s linear infinite;
+    opacity: .3; }
+  .fog-container__fog-2 {
+    background: url("/img/fog-2.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    animation: foging 45s linear infinite;
+    opacity: .5; }
+
+.header__main-img {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative; }
+  .header__main-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .header__main-img__overlay {
+    width: 100%;
+    height: 100%;
+    min-height: 120vh;
+    background: #1a2a6c;
+    background: -webkit-linear-gradient(to left bottom, #fdbb2d9c 25%, #b21f1f65, #1a2a6cd8 77%);
+    background: linear-gradient(to left bottom, #fdbb2d80 25%, #b21f1f42, #1a2a6c69 77%);
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.portfolio {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top right, #8a2387, #e94057, #f27121);
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transform: translateY(100%); }
+  .portfolio__projects-container {
+    border: 4px solid red;
+    margin: 15rem 3rem;
+    padding: 1.5rem;
+    height: 55%; }
+    .portfolio__projects-container__project-title {
+      text-align: center; }
+    .portfolio__projects-container__controller {
+      display: block;
+      text-align: center;
+      margin: 3vh auto; }
+    .portfolio__projects-container__boxes-container {
+      display: inline-block;
+      width: 100%;
+      height: 65%;
+      border: 2px solid black;
+      margin: 1.5rem auto;
+      border: 2px solid yellow; }
+    .portfolio__projects-container .box {
+      border: 2px solid red;
+      width: 100%;
+      height: 100%; }
+    .portfolio__projects-container__box-1 {
+      background-image: url("/img/header-4.jpeg");
+      background-size: contain; }
+    .portfolio__projects-container__box-2 {
+      display: none;
+      background: rebeccapurple;
+      visibility: hidden;
+      position: absolute; }
+    .portfolio__projects-container__box-3 {
+      display: none;
+      background: rebeccapurple;
+      visibility: hidden;
+      position: absolute; }
+    .portfolio__projects-container__box-4 {
+      display: none;
+      background: rebeccapurple;
+      visibility: hidden;
+      position: absolute; }
+    .portfolio__projects-container__box-5 {
+      display: none;
+      background: rebeccapurple;
+      visibility: hidden;
+      position: absolute; }
+    .portfolio__projects-container__box-6 {
+      display: none;
+      background: rebeccapurple;
+      visibility: hidden;
+      position: absolute; }
+
+#portfolio-nav:hover {
+  border: 10px solid darkcyan; }
+
+.shown {
+  z-index: 2;
+  transform: translateY(0);
+  transition: 2s; }
+
+.hidden {
+  z-index: -1;
+  transform: translateY(100%);
+  transition: 2s; }
