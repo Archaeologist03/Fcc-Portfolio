@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.4.2",
     "node-sass": "^4.9.4",
     "particles.js": "^2.0.0"
   },

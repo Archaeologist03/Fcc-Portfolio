@@ -2,16 +2,35 @@
     // display: block;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top right, #8a2387, #e94057, #f27121);
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
     overflow: hidden;
 
-    transform: translateY(100%);
-    
+    transform: translateY(-100%);
+    transition-timing-function: ease-in-out;
 
+    // display: none;
+    &__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__overlay {
+        background-color: rgba(10, 111, 194, 0.425);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
 
 
     &__projects-container {
@@ -19,6 +38,9 @@
         margin: 15rem 3rem;
         padding: 1.5rem;
         height: 55%;
+        z-index: 5;
+
+
 
         &__project-title {
             text-align: center;
@@ -33,21 +55,59 @@
         &__boxes-container {
             display: inline-block;
             width: 100%;
-            height: 65%;
-            border: 2px solid black;
+            height: 80%;
+            border: 1px solid green;
             margin: 1.5rem auto;
-            border: 2px solid yellow;
+
         }
 
         .box {
-            border: 2px solid red;
             width: 100%;
             height: 100%;
+            overflow: hidden;
         }
 
         &__box-1 {
-            background-image: url("/img/header-4.jpeg");
-            background-size: contain;
+            border: 1px solid yellow;
+            overflow: hidden;
+
+            &__img-container {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 80%;
+                border-radius: 10px;
+                border: 5px solid green;
+                
+                &__img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                .fa-github {
+                    font-size: 34px;
+                    position: absolute;
+                    top: 75%;
+                    left: 55%;
+                    transition: 1s;
+                }
+                .fa-github:hover {
+                    transform: scale(1.2);
+                }
+
+            }
+
+
+
+            .projects-title {
+                color: #fff;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .projects-used {
+                color: #fff;
+            }
         }
 
         &__box-2 {
@@ -93,18 +153,19 @@
 
 #portfolio-nav:hover {
     // z-index: 1;
-    border: 10px solid darkcyan;
 }
 
 .shown {
     z-index: 2;
     transform: translateY(0);
     transition: 2s;
+    display: block;
 }
 
 .hidden {
     z-index: -1;
     transform: translateY(100%);
     transition: 2s;
+    display: none;
 
 }

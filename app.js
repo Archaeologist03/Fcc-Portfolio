@@ -10,4 +10,5 @@ let portCont = document.querySelector(".portfolio");
 port.addEventListener("click", () => {
   portCont.classList.add("shown");
  
-})
+});
+
