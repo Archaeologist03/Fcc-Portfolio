@@ -78,21 +78,42 @@
                 height: 80%;
                 border-radius: 10px;
                 border: 5px solid green;
-                
+                perspective: 355px;
+                backface-visibility: visible;
+
                 &__img {
                     display: block;
                     width: 100%;
                     height: 100%;
                 }
-                .fa-github {
-                    font-size: 34px;
+
+                .fa {
+                    font-size: 3.5rem;
+                    color: $color-icons-yellow;
+                    transition: .3s ease-in-out;
+                    transform: scale(1.1);
+                }
+
+                .fa-globe {
                     position: absolute;
                     top: 75%;
-                    left: 55%;
-                    transition: 1s;
+                    left: 35%;
                 }
-                .fa-github:hover {
-                    transform: scale(1.2);
+
+                .fa-github {
+                    position: absolute;
+                    top: 75%;
+                    left: 50%;
+                }
+
+                .fa:hover {
+                    // transform: scale(1.5) rotateY(360deg);
+                    color: $color-icons-pink;
+                    animation: iconMovement 1s ease-out;
+                }
+                
+                .fa:active {
+                    transform: scale(0.9);
                 }
 
             }
@@ -100,13 +121,13 @@
 
 
             .projects-title {
-                color: #fff;
+                color: $color-white;
                 text-align: center;
                 margin-bottom: 1rem;
             }
 
             .projects-used {
-                color: #fff;
+                color: $color-white;
             }
         }
 

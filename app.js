@@ -1,16 +1,24 @@
+// PARTICLES
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load('particles-js', '/assets/particles.json', function() {
-  console.log('callback - particles.js config loaded');
+particlesJS.load('particles-js', '/assets/particles.json', function () {
+	console.log('callback - particles.js config loaded');
 });
 
-
+// DOM SELECTION
 let port = document.querySelector("#portfolio-nav");
 let portCont = document.querySelector(".portfolio");
 
+
+
+// EVENTS
+
+//Add shown class to clicked nav..
 port.addEventListener("click", () => {
-  portCont.classList.add("shown");
- 
+	portCont.classList.add("shown");
+
 });
 
-
-//git fetch/merge/pull..
+//Cursor..
+// port.addEventListener("mouseover", () => {
+// 	let newCursor = port.classList.add("new-cursor");
+// });

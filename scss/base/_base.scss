@@ -15,17 +15,21 @@ html {
     -webkit-user-select: none;
     user-select: none;
     min-height: 100%;
-
 }
 
 body {
     box-sizing: border-box;
     min-height: 100%;
     overflow: hidden;
+    cursor: url('/img/cursor3-small.png'), default;
+}
+
+// make every clickable(not li but.. eh) element have custom hand cursor
+a:hover, li:hover, i:hover{
+    cursor: url("/img/cursor-hand.png"), default;
 }
 
 
 
-//     color: #0d54be
 
 // "value": ["#e42c79", "#b90e56", "#d11e69", "#c7139a", "#3421dd", "#5b1cd1", "#e94504", "#d1561d"]
