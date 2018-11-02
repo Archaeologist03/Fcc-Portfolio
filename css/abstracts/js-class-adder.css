@@ -1,0 +1,6 @@
+.logo-mouseover {
+  transform: scale(0.85);
+  transition: 1s; }
+
+.nav-click {
+  transform: scale(1.5); }
