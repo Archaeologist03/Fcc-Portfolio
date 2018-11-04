@@ -1,0 +1,14 @@
+.shown {
+    z-index: 2;
+    transform: translateY(0);
+    transition: 2s;
+    display: block;
+}
+
+.hidden {
+    z-index: -1;
+    transform: translateY(-100%);
+    // transition: 2s;
+    // display: none;
+
+}

@@ -7651,7 +7651,7 @@ readers do not read off random characters that represent icons */
 
 .logo-mouseover {
   transform: scale(0.85);
-  transition: 1s; }
+  box-shadow: -4px -4px 44px; }
 
 .nav-click {
   transform: scale(1.5); }
@@ -7815,6 +7815,17 @@ a:hover, li:hover, i:hover {
     animation: foging 45s linear infinite;
     opacity: .5; }
 
+.shown {
+  z-index: 2;
+  transform: translateY(0);
+  transition: 2s;
+  display: block; }
+
+.hidden {
+  z-index: -1;
+  transform: translateY(-100%);
+  transition: 2s; }
+
 .header__main-img {
   width: 100%;
   height: 100vh;
@@ -7844,7 +7855,8 @@ a:hover, li:hover, i:hover {
   width: 23rem;
   height: 23rem;
   overflow: hidden;
-  border-radius: 50%; }
+  border-radius: 55%;
+  box-shadow: 2px 4px 10px; }
   .header__mid-img-container__img {
     width: 100%;
     height: 100%;
@@ -7867,7 +7879,6 @@ a:hover, li:hover, i:hover {
   top: 0;
   left: 0;
   overflow: hidden;
-  transform: translateY(-100%);
   transition-timing-function: ease-in-out; }
   .portfolio__image {
     position: absolute;
@@ -7972,15 +7983,3 @@ a:hover, li:hover, i:hover {
       background: rebeccapurple;
       visibility: hidden;
       position: absolute; }
-
-.shown {
-  z-index: 2;
-  transform: translateY(0);
-  transition: 2s;
-  display: block; }
-
-.hidden {
-  z-index: -1;
-  transform: translateY(100%);
-  transition: 2s;
-  display: none; }

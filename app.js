@@ -5,39 +5,50 @@ particlesJS.load('particles-js', '/assets/particles.json', function () {
 });
 
 // DOM SELECTION
+const body = document.querySelector("body");
+const header = document.querySelector(".header");
 const portCont = document.querySelector(".portfolio");
 const port = document.querySelector("#portfolio-nav");
+const navUl = document.querySelector(".navigation__list");
 const navItems = document.querySelectorAll(".navigation__item");
 const homeLogo = document.querySelector(".home-logo__link");
 const midGifCont = document.querySelector(".header__mid-img-container");
 const homeGifOverlay = document.querySelector(".header__mid-img-container__overlay");
 
-console.log(midGifCont);
 
 // EVENTS
+(function () {
 
-//Add shown class to clicked nav..
-port.addEventListener("click", () => {
-	portCont.classList.add("shown");
-});
 
-// WORK ON HAVING TWO SEPARATE TRANSFORMS(probably wont work with adding classes like this)
-//Add animation to mid gif when nav is clicked
-// navItems.forEach(nav => nav.addEventListener("click", () => {
-// 	console.log(nav);
-// 	midGifCont.classList.add("nav-click");
-// }));
+	//Add shown class to clicked nav..
+	// port.addEventListener("click", () => {
+	// 	portCont.classList.add("shown");
+	// 	portCont.classList.remove("hidden");
+	// });
 
-// Cursor..
-// port.addEventListener("mouseover", () => {
-// 	let newCursor = port.classList.add("new-cursor");
-// });
+	//Change mid gif on home logo hover 
+	homeLogo.addEventListener("mouseover", () => {
+		homeGifOverlay.classList.add("logo-mouseover");
+	});
+	homeLogo.addEventListener("mouseout", () => {
+		homeGifOverlay.classList.remove("logo-mouseover");
+	});
 
-//Change mid gif on home logo hover 
-homeLogo.addEventListener("mouseover", () => {
-	homeGifOverlay.classList.add("logo-mouseover");
-});
-homeLogo.addEventListener("mouseout", () => {
-	homeGifOverlay.classList.remove("logo-mouseover");
-});
 
+	const pageObj = {
+		portfolio: portCont,
+	}
+	// Change pages even on body
+	Array.from(navUl.children).forEach(li => li.addEventListener("click", (e) => {
+		li.classList.add("shown");
+		pageObj.portfolio.classList.remove("hidden");
+		pageObj.portfolio.classList.add("shown");
+
+		console.log(li)
+	}));
+
+
+})();
+
+
+// Navigation - adding and removing show class on click on all navigation items(including home-logo)
