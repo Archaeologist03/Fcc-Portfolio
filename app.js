@@ -37,14 +37,32 @@ const homeGifOverlay = document.querySelector(".header__mid-img-container__overl
 
 	const pageObj = {
 		portfolio: portCont,
+		// about: ,
+		// contact: ,
 	}
-	// Change pages even on body
+	// Loop thru nav items and add listener to each of them
 	Array.from(navUl.children).forEach(li => li.addEventListener("click", (e) => {
-		li.classList.add("shown");
-		pageObj.portfolio.classList.remove("hidden");
-		pageObj.portfolio.classList.add("shown");
+		// Loop over pageObj - check if each of properties has class hidden/shown - add hidden, remove shown
+		// All ul elements should have hidden before shown/hidden toggle begins(to avoid having same class multiple times) - to make other elements visible
+		// Shown class should be removed from every element when click occurs to prevent multiple shown classes to one element (begin seeable even when we dont want to)
+		for (let prop in pageObj) {
+			!pageObj[prop].classList.contains("hidden") ? pageObj[prop].classList.add("hidden") : false;
+			pageObj[prop].classList.contains("shown") ? pageObj[prop].classList.remove("shown") : false;
+		}
+		// Portfolio clicked
+		if (e.target.textContent.toLowerCase() === "portfolio") {
+			pageObj.portfolio.classList.remove("hidden");
+			pageObj.portfolio.classList.add("shown");
+			// About clicked
+		} else if (e.target.textContent.toLowerCase() === "about") {
+			pageObj.about.classList.remove("hidden");
+			pageObj.about.classList.add("shown");
+			// Contact clicked
+		} else if(e.target.textContent.toLowerCase() === "contact") {
+			pageObj.contact.classList.remove("hidden");
+			pageObj.contact.classList.add("shown");
+		}
 
-		console.log(li)
 	}));
 
 
