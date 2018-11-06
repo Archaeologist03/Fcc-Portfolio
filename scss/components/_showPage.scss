@@ -1,14 +1,15 @@
 .shown {
     z-index: 2;
     transform: translateY(0);
-    transition: 2s;
     display: block;
+    transition: 1.5s ease-in-out;
+
 }
 
 .hidden {
     z-index: -1;
     transform: translateY(-100%);
-    // transition: 2s;
+    transition: 1.5s cubic-bezier(.63,.27,.35,.89);
     // display: none;
 
 }

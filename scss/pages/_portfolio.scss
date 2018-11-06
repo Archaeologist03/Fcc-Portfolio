@@ -9,7 +9,7 @@
     overflow: hidden;
 
     // transform: translateY(-100%);
-    transition-timing-function: ease-in-out;
+    // transition-timing-function: ease-in-out;
 
     // display: none;
     &__image {
@@ -97,13 +97,13 @@
                 .fa-globe {
                     position: absolute;
                     top: 75%;
-                    left: 35%;
+                    left: 40%;
                 }
 
                 .fa-github {
                     position: absolute;
                     top: 75%;
-                    left: 50%;
+                    left: 55%;
                 }
 
                 .fa:hover {
@@ -117,7 +117,6 @@
                 }
 
             }
-
 
 
             .projects-title {
@@ -172,7 +171,5 @@
 
 }
 
-#portfolio-nav:hover {
-    // z-index: 1;
-}
+
 
