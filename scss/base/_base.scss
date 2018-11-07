@@ -21,12 +21,12 @@ body {
     box-sizing: border-box;
     min-height: 100%;
     overflow: hidden;
-    cursor: url('/img/cursor3-small.png'), default;
+    cursor: url('../img/cursor3-small.png'), default;
 }
 
 // make every clickable(not li but.. eh) element have custom hand cursor
 a:hover, li:hover, i:hover{
-    cursor: url("/img/cursor-hand.png"), default;
+    cursor: url("../img/cursor-hand.png"), default;
 }
 
 
