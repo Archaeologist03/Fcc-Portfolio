@@ -16,6 +16,7 @@ const navItems = document.querySelectorAll(".navigation__item");
 const homeLogo = document.querySelector(".home-logo__link");
 const midGifCont = document.querySelector(".header__mid-img-container");
 const homeGifOverlay = document.querySelector(".header__mid-img-container__overlay");
+const aboutCont = document.querySelector(".about");
 
 
 
@@ -27,7 +28,7 @@ const homeGifOverlay = document.querySelector(".header__mid-img-container__overl
 	// Navbar data structure holder
 	const pageObj = {
 		portfolio: portCont,
-		// about: ,
+		about: aboutCont,
 		// contact: ,
 	}
 
