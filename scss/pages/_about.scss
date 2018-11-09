@@ -1,5 +1,5 @@
 .about {
-    z-index:1;
+    z-index: 1;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -8,33 +8,36 @@
     overflow: hidden;
 
 
-    
+
 
     &__image {
         width: 45%;
         height: 35%;
-        border: 2px solid green;
-        background: red;
+        border-radius: 5%;
         position: absolute;
         top: 15%;
         left: 50%;
         transform: translateX(-50%);
+        overflow: hidden;
 
         img {
             width: 100%;
             height: 100%
         }
-        
+
     }
 
     &__text {
-       width: 75%;
-       height: 30%;
-       border: 2px solid red;
-       background-color: tomato;
-       position: absolute;
-       bottom: 15%;
-       left: 50%; 
-       transform: translateX(-50%);
+        width: 75%;
+        height: 30%;
+        border-radius: 5%;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        padding: 15px;
+        background-color: tomato;
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

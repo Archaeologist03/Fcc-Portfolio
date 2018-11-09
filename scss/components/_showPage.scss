@@ -10,6 +10,16 @@
     transform: translateY(-100%);
     transition: 1.5s cubic-bezier(.63,.27,.35,.89);
     // display: none;
-    
+}
+
+.headerShown {
+    transform: translateY(0);
+    transition: 1.5s ease-in-out;
+
+}
+
+.headerHidden {
+    transform: translateY(100%);
+    transition: 1.5s ease-in-out;
 
 }

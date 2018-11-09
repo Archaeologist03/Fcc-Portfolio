@@ -16,6 +16,7 @@ const navItems = document.querySelectorAll(".navigation__item");
 const homeLogo = document.querySelector(".home-logo__link");
 const midGifCont = document.querySelector(".header__mid-img-container");
 const homeGifOverlay = document.querySelector(".header__mid-img-container__overlay");
+const headerTextCont = document.querySelector(".header__text-container");
 const aboutCont = document.querySelector(".about");
 
 
@@ -55,6 +56,9 @@ const aboutCont = document.querySelector(".about");
 	//Home-logo btn click event - get to home page on logo click
 	homeLogo.addEventListener("click", () => {
 		hidePages();
+		// Add shown class and remove hidden to show header text when home logo is clicked
+		headerTextCont.classList.remove("headerHidden");
+		headerTextCont.classList.add("headerShown");
 	});
 
 	//Change mid gif on home logo hover 
@@ -67,6 +71,8 @@ const aboutCont = document.querySelector(".about");
 	Array.from(navUl.children).forEach(li => li.addEventListener("click", (e) => {
 		// Add hidden, remove shown on every page
 		hidePages();
+		// Hide(move down) home/header text
+		headerTextCont.classList.add("headerHidden");
 		// Portfolio clicked
 		if (e.target.textContent.toLowerCase() === "portfolio") showAndRemovePage(pageObj.portfolio);
 		// About clicked
@@ -75,6 +81,8 @@ const aboutCont = document.querySelector(".about");
 		if (e.target.textContent.toLowerCase() === "contact") showAndRemovePage(pageObj.contact);
 
 	}));
+
+	// Move home/header text to bottom when navbar(other) pages are shown
 
 
 })();
