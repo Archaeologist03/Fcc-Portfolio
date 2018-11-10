@@ -26,9 +26,8 @@
     }
 
     &__item {
-
         background-color: rgba(255, 235, 205, 0.301);
-        width: 33.33%;
+        width: 32.33%;
         float: left;
         // border: 2px solid blue;
         text-align: center;
@@ -39,6 +38,12 @@
         border-left: 3px solid rgba(124, 95, 204, 0.836);
         transform: rotateY(-5deg) rotateZ(1deg);
         transition: border-left .5s, border-bottom 2s, border-right 1s, border-top 3s, box-shadow .3s, background-color .7s, transform 1.5s;
+        margin-left: 1%;
+
+        &:link {
+            transform: scale(1);
+
+        }
 
         &:hover {
             border-left: 5px solid rgb(200, 248, 144);
@@ -54,7 +59,7 @@
         }
 
         &:active {
-            transform: scale(.9);
+            transform: scale(.95);
             background: rgba(255, 0, 140, 0.671);
             transition: 0.1s;
         }

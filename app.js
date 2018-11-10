@@ -18,6 +18,7 @@ const midGifCont = document.querySelector(".header__mid-img-container");
 const homeGifOverlay = document.querySelector(".header__mid-img-container__overlay");
 const headerTextCont = document.querySelector(".header__text-container");
 const aboutCont = document.querySelector(".about");
+const contactCont = document.querySelector(".contact");
 
 
 
@@ -30,7 +31,7 @@ const aboutCont = document.querySelector(".about");
 	const pageObj = {
 		portfolio: portCont,
 		about: aboutCont,
-		// contact: ,
+		contact: contactCont,
 	}
 
 	// --- Loop over pageObj - check if each of properties has class hidden/shown - add hidden, remove shown
@@ -65,20 +66,23 @@ const aboutCont = document.querySelector(".about");
 	homeLogo.addEventListener("mouseover", () => homeGifOverlay.classList.add("logo-mouseover"));
 	homeLogo.addEventListener("mouseout", () => homeGifOverlay.classList.remove("logo-mouseover"));
 
-
 	// Navbar event listener - page change
 	// Loop thru nav items and add listener to each of them
-	Array.from(navUl.children).forEach(li => li.addEventListener("click", (e) => {
+	navItems.forEach(li => li.addEventListener("click", (e) => {
+		// Get targets id and targets parent id (fixes border/edges prob)
+		let targetParentId = e.target.parentElement.getAttribute("id");
+		let targetId = e.target.getAttribute("id");
+		console.log(e.target);
 		// Add hidden, remove shown on every page
 		hidePages();
 		// Hide(move down) home/header text
 		headerTextCont.classList.add("headerHidden");
-		// Portfolio clicked
-		if (e.target.textContent.toLowerCase() === "portfolio") showAndRemovePage(pageObj.portfolio);
+		// Portfolio nav clicked
+		if (targetParentId === "portfolio-nav" || targetId === "portfolio-nav") showAndRemovePage(pageObj.portfolio);
 		// About clicked
-		if (e.target.textContent.toLowerCase() === "about") showAndRemovePage(pageObj.about);
+		if (targetParentId === "about-nav" || targetId === "about-nav") showAndRemovePage(pageObj.about);
 		// Contact clicked
-		if (e.target.textContent.toLowerCase() === "contact") showAndRemovePage(pageObj.contact);
+		if (targetParentId === "contact-nav" || targetId === "contact-nav") showAndRemovePage(pageObj.contact);
 
 	}));
 

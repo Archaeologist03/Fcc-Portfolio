@@ -3,8 +3,6 @@
 // @import "../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 
 
-
-
 @import "abstracts/variables";
 @import "abstracts/js-class-adder";
 
@@ -20,13 +18,12 @@
 
 
 
-
-
 @import "layout/header.scss"; 
 
 @import "pages/home";
 @import "pages/portfolio";
 @import "pages/about";
+@import "pages/contact";
 
 
 

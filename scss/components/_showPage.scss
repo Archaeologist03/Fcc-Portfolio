@@ -14,12 +14,15 @@
 
 .headerShown {
     transform: translateY(0);
-    transition: 1.5s ease-in-out;
+    transition: 1.5s cubic-bezier(.56,1.55,.59,.81);
 
 }
 
 .headerHidden {
     transform: translateY(100%);
-    transition: 1.5s ease-in-out;
+    transition: 1.5s cubic-bezier(.26,.99,.61,-0.46);
 
 }
+
+
+// cubic-bezier(.52,1.53,.5,.71)
