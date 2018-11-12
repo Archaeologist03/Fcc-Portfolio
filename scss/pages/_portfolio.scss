@@ -81,7 +81,8 @@
                 border-radius: 10px;
                 border: 5px solid green;
                 perspective: 355px;
-                backface-visibility: visible;
+                backface-visibility: hidden;
+                 -webkit-backface-visibility: hidden;
 
                 &__img {
                     display: block;
@@ -94,24 +95,30 @@
                     color: $color-icons-yellow;
                     transition: .3s ease-in-out;
                     transform: scale(1.1);
+                    -webkit-filter: blur(0px);
+                    filter: blur(0px);
+
                 }
 
                 .fa-globe {
                     position: absolute;
                     top: 75%;
                     left: 40%;
+
                 }
 
                 .fa-github {
                     position: absolute;
                     top: 75%;
                     left: 55%;
+
                 }
 
                 .fa:hover {
                     // transform: scale(1.5) rotateY(360deg);
                     color: $color-icons-pink;
                     animation: iconMovement 1s ease-out;
+
                 }
                 
                 .fa:active {

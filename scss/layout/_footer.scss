@@ -6,17 +6,20 @@
     bottom: 2%;
     left: 0;
 
+
     &__social-container {
         // width: 100%;
 
         // Beware.. image overflowing - tho it works fine as it is - if something breaks fallback to width 100%
-        width: fit-content; 
+        width: fit-content;
         display: inline-block;
         position: absolute;
         left: 50%;
         top: 55%;
         transform: translate(-50%, -50%);
         z-index: 2;
+        filter: blur(0px);
+
 
 
         &__icon-link {
@@ -28,6 +31,15 @@
             position: relative;
             left: 50%;
             transform: translateX(-450%);
+            transition: transform .5s cubic-bezier(.26, 1.58, .77, -0.2);
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
+
+
+            &:hover {
+                transform: translateX(-450%) scale(1.5) skewY(5deg) rotateZ(5deg);
+            }
+
 
 
             .footer-icon {
@@ -44,6 +56,7 @@
                 color: rgb(26, 22, 22);
 
             }
+
 
             #footer-linkedin {
                 color: rgb(17, 44, 165);
