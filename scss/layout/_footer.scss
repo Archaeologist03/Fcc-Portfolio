@@ -32,7 +32,6 @@
             left: 50%;
             transform: translateX(-450%);
             transition: transform .5s cubic-bezier(.26, 1.58, .77, -0.2);
-            -webkit-filter: blur(0px);
             filter: blur(0px);
 
 
@@ -53,8 +52,7 @@
             }
 
             #footer-github {
-                color: rgb(26, 22, 22);
-
+                color: rgb(243, 0, 61);
             }
 
 

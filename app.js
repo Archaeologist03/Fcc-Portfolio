@@ -17,6 +17,7 @@ const homeLogo = document.querySelector(".home-logo__link");
 const midGifCont = document.querySelector(".header__mid-img-container");
 const homeGifOverlay = document.querySelector(".header__mid-img-container__overlay");
 const headerTextCont = document.querySelector(".header__text-container");
+const skillsCont = document.querySelector(".skills-container");
 const aboutCont = document.querySelector(".about");
 const contactCont = document.querySelector(".contact");
 
@@ -60,6 +61,9 @@ const contactCont = document.querySelector(".contact");
 		// Add shown class and remove hidden to show header text when home logo is clicked
 		headerTextCont.classList.remove("headerHidden");
 		headerTextCont.classList.add("headerShown");
+		skillsCont.classList.remove("skillsHidden");
+		skillsCont.classList.add("skillsShown");
+
 	});
 
 	//Change mid gif on home logo hover 
@@ -77,6 +81,11 @@ const contactCont = document.querySelector(".contact");
 		hidePages();
 		// Hide(move down) home/header text
 		headerTextCont.classList.add("headerHidden");
+		headerTextCont.classList.remove("headerShown");
+
+		//Hide(move down) skills when navs are clicked
+		skillsCont.classList.add("skillsHidden");
+		skillsCont.classList.remove("skillsShown");
 		// Portfolio nav clicked
 		if (targetParentId === "portfolio-nav" || targetId === "portfolio-nav") showAndRemovePage(pageObj.portfolio);
 		// About clicked

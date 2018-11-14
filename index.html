@@ -7,7 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=K2D:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -66,8 +69,18 @@
         </div>
 
         <div class="header__text-container">
-            <h2>Ilija Savic</h2>
-            <h4>Front-End Developer</h4>
+            <h2 class="header__text-container__name">Ilija Savic</h2>
+            <h4 class="header__text-container__job">Front-End Developer</h4>
+        </div>
+
+        <div class="skills-container skillsShown">
+            <i id="skills-html" class="fab fa-html5"></i>
+            <i id="skills-css" class="fab fa-css3-alt"></i>
+            <i id="skills-js" class="fab fa-js-square"></i>
+            <i id="skills-npm" class="fab fa-npm"></i>
+            <i id="skills-sass" class="fab fa-sass"></i>
+            <i id="skills-react" class="fab fa-react"></i>
+
         </div>
 
 
@@ -98,11 +111,11 @@
 
 
                         <a href="https://archaeologist03.github.io/JS-Clock/" target="_blank">
-                            <i class="fa fa-globe"></i>
+                            <i id="portfolio-globe-icon" class="fas fa-globe portfolio-icon"></i>
                         </a>
 
                         <a href="https://github.com/Archaeologist03/JS-Clock" target="_blank">
-                            <i class="fa fa-github" aria-hidden="true"></i>
+                            <i id="portfolio-github-icon" class="fab fa-github portfolio-icon" aria-hidden="true"></i>
                         </a>
 
 
@@ -178,18 +191,18 @@
 
     <!-- FOOTER  -->
 
-    
+
     <footer class="footer">
         <div class="footer__social-container">
-            
+
             <a class="footer__social-container__icon-link" href="https://github.com/Archaeologist03" target="_blank">
-                <i id="footer-github" class="fa fa-github-square footer-icon"></i>
+                <i id="footer-github" class="fab fa-github-square footer-icon"></i>
             </a>
             <a class="footer__social-container__icon-link" href="https://www.linkedin.com/in/ilija-savic-03/" target="_blank">
-                <i id="footer-linkedin" class="fa fa-linkedin-square footer-icon"></i>
+                <i id="footer-linkedin" class="fab fa-linkedin footer-icon"></i>
             </a>
             <a class="footer__social-container__icon-link" href="https://www.freecodecamp.org/archaeologist03" target="_blank">
-                <i id="footer-freecodecamp" class="fa fa-free-code-camp footer-icon"></i>
+                <i id="footer-freecodecamp" class="fab fa-free-code-camp footer-icon"></i>
 
             </a>
             <a class="footer__social-container__icon-link" href="https://www.codewars.com/users/Archaeologist03" target="_blank">
