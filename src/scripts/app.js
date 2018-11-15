@@ -1,25 +1,10 @@
+import { domElements } from "./base";
+
 //  ------------- PARTICLES ---------------
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load('particles-js', '../../dist/assets/particles.json', function () {
 	console.log('callback - particles.js config loaded');
 });
-
-
-
-// --------------- DOM SELECTION ---------------
-const body = document.querySelector("body");
-const header = document.querySelector(".header");
-const portCont = document.querySelector(".portfolio");
-const port = document.querySelector("#portfolio-nav");
-const navUl = document.querySelector(".navigation__list");
-const navItems = document.querySelectorAll(".navigation__item");
-const homeLogo = document.querySelector(".home-logo__link");
-const midGifCont = document.querySelector(".header__mid-img-container");
-const homeGifOverlay = document.querySelector(".header__mid-img-container__overlay");
-const headerTextCont = document.querySelector(".header__text-container");
-const skillsCont = document.querySelector(".skills-container");
-const aboutCont = document.querySelector(".about");
-const contactCont = document.querySelector(".contact");
 
 
 
@@ -30,9 +15,9 @@ const contactCont = document.querySelector(".contact");
 
 	// Navbar data structure holder
 	const pageObj = {
-		portfolio: portCont,
-		about: aboutCont,
-		contact: contactCont,
+		portfolio: domElements.portCont,
+		about: domElements.aboutCont,
+		contact: domElements.contactCont,
 	}
 
 	// --- Loop over pageObj - check if each of properties has class hidden/shown - add hidden, remove shown
@@ -56,23 +41,23 @@ const contactCont = document.querySelector(".contact");
 	// ----EVENTS START----
 
 	//Home-logo btn click event - get to home page on logo click
-	homeLogo.addEventListener("click", () => {
+	domElements.homeLogo.addEventListener("click", () => {
 		hidePages();
 		// Add shown class and remove hidden to show header text when home logo is clicked
-		headerTextCont.classList.remove("headerHidden");
-		headerTextCont.classList.add("headerShown");
-		skillsCont.classList.remove("skillsHidden");
-		skillsCont.classList.add("skillsShown");
+		domElements.headerTextCont.classList.remove("headerHidden");
+		domElements.headerTextCont.classList.add("headerShown");
+		domElements.skillsCont.classList.remove("skillsHidden");
+		domElements.skillsCont.classList.add("skillsShown");
 
 	});
 
 	//Change mid gif on home logo hover 
-	homeLogo.addEventListener("mouseover", () => homeGifOverlay.classList.add("logo-mouseover"));
-	homeLogo.addEventListener("mouseout", () => homeGifOverlay.classList.remove("logo-mouseover"));
+	domElements.homeLogo.addEventListener("mouseover", () => domElements.homeGifOverlay.classList.add("logo-mouseover"));
+	domElements.homeLogo.addEventListener("mouseout", () => domElements.homeGifOverlay.classList.remove("logo-mouseover"));
 
 	// Navbar event listener - page change
 	// Loop thru nav items and add listener to each of them
-	navItems.forEach(li => li.addEventListener("click", (e) => {
+	domElements.navItems.forEach(li => li.addEventListener("click", (e) => {
 		// Get targets id and targets parent id (fixes border/edges prob)
 		let targetParentId = e.target.parentElement.getAttribute("id");
 		let targetId = e.target.getAttribute("id");
@@ -80,12 +65,12 @@ const contactCont = document.querySelector(".contact");
 		// Add hidden, remove shown on every page
 		hidePages();
 		// Hide(move down) home/header text
-		headerTextCont.classList.add("headerHidden");
-		headerTextCont.classList.remove("headerShown");
+		domElements.headerTextCont.classList.add("headerHidden");
+		domElements.headerTextCont.classList.remove("headerShown");
 
 		//Hide(move down) skills when navs are clicked
-		skillsCont.classList.add("skillsHidden");
-		skillsCont.classList.remove("skillsShown");
+		domElements.skillsCont.classList.add("skillsHidden");
+		domElements.skillsCont.classList.remove("skillsShown");
 		// Portfolio nav clicked
 		if (targetParentId === "portfolio-nav" || targetId === "portfolio-nav") showAndRemovePage(pageObj.portfolio);
 		// About clicked
