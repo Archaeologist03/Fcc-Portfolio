@@ -3,6 +3,7 @@
     transform: translateY(0);
     display: block;
     transition: 1.5s ease-in-out;
+    opacity: 1;
 }
 
 .hidden {
@@ -11,6 +12,7 @@
     transition: 1.5s cubic-bezier(.63, .27, .35, .89);
     overflow: hidden;
     // display: none;
+    opacity: 0;
 }
 
 .headerShown {
