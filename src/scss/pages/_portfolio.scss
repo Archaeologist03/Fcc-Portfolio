@@ -7,60 +7,20 @@
     top: 0;
     left: 0;
     overflow: hidden;
-    
-    // transform: translateY(-100%);
-    // transition-timing-function: ease-in-out;
-
-    // display: none;
-
-    
-    &__image {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-    }
-
-    &__overlay {
-        background-color: rgba(10, 111, 194, 0.425);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
 
 
     &__projects-container {
         border: 4px solid red;
         margin: 15rem 3rem;
-        padding: 1.5rem;
-        height: 55%;
-        z-index: 5;
+        height: 50%;
 
-
-
-        &__project-title {
-            text-align: center;
-        }
-
-        &__controller {
-            display: block;
-            text-align: center;
-            margin: 3vh auto;
-        }
 
         &__boxes-container {
             display: inline-block;
             width: 100%;
-            height: 80%;
-            border: 1px solid green;
-            margin: 1.5rem auto;
-
+            height: 100%;
+            border: 3px solid green;
+            margin: 0 auto;
         }
 
         .box {
@@ -70,114 +30,52 @@
         }
 
         &__box-1 {
-            border: 1px solid yellow;
+            border: 5px solid yellow;
             overflow: hidden;
+            width: 100%;
+            position: relative;
 
-            &__img-container {
-                position: relative;
+
+            &__picture {
                 display: block;
                 width: 100%;
-                height: 80%;
-                border-radius: 10px;
-                border: 5px solid green;
-                perspective: 355px;
-                backface-visibility: hidden;
-                 -webkit-backface-visibility: hidden;
-
-                &__img {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                }
-
-                .portfolio-icon {
-                    font-size: 3rem;
-                    color: $color-icons-yellow;
-                    transition: .3s ease-in-out;
-                    transform: scale(1.1);
-                    -webkit-filter: blur(0px);
-                    filter: blur(0px);
-
-                }
-
-                #portfolio-globe-icon {
-                    position: absolute;
-                    top: 75%;
-                    left: 40%;
-                }
-
-                #portfolio-github-icon {
-                    position: absolute;
-                    top: 75%;
-                    left: 55%;
-
-                }
-
-                .portfolio-icon:hover {
-                    // transform: scale(1.5) rotateY(360deg);
-                    color: $color-icons-pink;
-                    animation: iconMovement 1s ease-out;
-
-                }
-                
-                .portfolio-icon:active {
-                    transform: scale(0.9);
-                }
-
+                height: 70%;
             }
 
-
-            .projects-title {
-                color: $color-white;
-                text-align: center;
-                margin-bottom: 1rem;
+            .portfolio-icon {
+                font-size: 3rem;
+                color: $color-icons-yellow;
+                transition: .3s ease-in-out;
+                transform: scale(1.1);
+                filter: blur(0px);
+                position: absolute;
+                top: 50%;
+                left: 50%;
             }
 
-            .projects-used {
-                color: $color-white;
+            #portfolio-globe-icon {
+                left: 40%;
             }
-        }
 
-        &__box-2 {
-            display: none;
-            background: rebeccapurple;
-            visibility: hidden;
-            position: absolute
-        }
+            #portfolio-github-icon {
+                left: 55%;
+            }
 
-        &__box-3 {
-            display: none;
-            background: rebeccapurple;
-            visibility: hidden;
-            position: absolute
-        }
+            .portfolio-icon:hover {
+                color: $color-icons-pink;
+                animation: iconMovement 1s ease-out;
+            }
 
-        &__box-4 {
-            display: none;
-            background: rebeccapurple;
-            visibility: hidden;
-            position: absolute
-        }
+            .portfolio-icon:active {
+                transform: scale(0.9);
+            }
 
-        &__box-5 {
-            display: none;
-            background: rebeccapurple;
-            visibility: hidden;
-            position: absolute
-        }
-
-        &__box-6 {
-            display: none;
-            background: rebeccapurple;
-            visibility: hidden;
-            position: absolute
+            &__text-container {
+                border: 9px solid wheat;
+                width: 100%;
+                height: 100%;
+            }
+            
         }
     }
-
-
-
-
 }
-
-
-

@@ -10,12 +10,16 @@
     <link href="https://fonts.googleapis.com/css?family=K2D:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="dist/css/main.css">
+    <!-- <link rel="stylesheet" href="dist/css/main.css"> -->
 
 </head>
-
+    <!-- css 288time 293size    -  js 274size 98time  html 23time  overall load 641ms   LOADING within js-->
+    <!-- css419+62 294size     -  js  273size 191time html 16time  overall load 1.08s 20reqs, 42.9kb LOADING stlyes on its own -->
 <body>
 
+
+
+    
     <!-- HOME-->
     <!-- HEADER -- bcground, nav, moving logo in mid -- contact handing from right side to be opened  -->
 
@@ -98,46 +102,26 @@
     <!-- Same nav and home btn at the top.. Add grid system with boxes for projects.. new background.. -->
 
     <section class="portfolio hidden">
-        <!-- <img class="portfolio__image" src="img/painting.jpeg" alt=""> -->
-        <!-- <div class="portfolio__overlay"></div> -->
         <div class="portfolio__projects-container">
             <div class="portfolio__projects-container__boxes-container">
-
                 <div class="portfolio__projects-container__box-1 box">
-                    <div class="portfolio__projects-container__box-1__img-container">
-                        <img class="portfolio__projects-container__box-1__img-container__img" src="dist/img/project1.jpg"
-                            alt="">
-
-
-                        <a href="https://archaeologist03.github.io/JS-Clock/" target="_blank">
-                            <i id="portfolio-globe-icon" class="fas fa-globe portfolio-icon"></i>
-                        </a>
-
-                        <a href="https://github.com/Archaeologist03/JS-Clock" target="_blank">
-                            <i id="portfolio-github-icon" class="fab fa-github portfolio-icon" aria-hidden="true"></i>
-                        </a>
-
+                    <img class="portfolio__projects-container__box-1__picture" src="dist/img/project1.jpg" alt="">
+                    <a href="https://archaeologist03.github.io/JS-Clock/" target="_blank">
+                        <i id="portfolio-globe-icon" class="fas fa-globe portfolio-icon"></i>
+                    </a>
+                    <a href="https://github.com/Archaeologist03/JS-Clock" target="_blank">
+                        <i id="portfolio-github-icon" class="fab fa-github portfolio-icon" aria-hidden="true"></i>
+                    </a>
+                    <div class="portfolio__projects-container__box-1__text-container">
+                        <h3>Text about the project</h3>
+                    </div>
+                    <div class="portfolio__projects-container__box-1__left-arrow">
 
                     </div>
+                    <div class="portfolio__projects-container__box-1__right-arrow">
 
-                    <h3 class="portfolio__projects-container__box-1--title projects-title">
-                        Meme Generator
-                    </h3>
-                    <h3 class="portfolio__projects-container__box-1--used projects-used">
-                        Used: React, SCSS, Webpack
-                    </h3>
-
-
+                    </div>
                 </div>
-
-                <div class="portfolio__projects-container__box-2 box"></div>
-                <div class="portfolio__projects-container__box-3 box"></div>
-                <div class="portfolio__projects-container__box-4 box"></div>
-                <div class="portfolio__projects-container__box-5 box"></div>
-                <div class="portfolio__projects-container__box-6 box"></div>
-            </div>
-            <div class="portfolio__projects-container__controller">
-                <- ---------------------------------------------- ->
             </div>
         </div>
     </section>

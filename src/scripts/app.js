@@ -1,3 +1,5 @@
+import "../scss/main.scss";
+
 import { domElements } from "./base";
 
 //  ------------- PARTICLES ---------------

@@ -5,20 +5,23 @@
   "main": "index.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.4.2",
-    "node-sass": "^4.9.4",
     "particles.js": "^2.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.1",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },
   "scripts": {
     "scss": "node-sass --watch src/scss -o dist/css/",
-    "build": "webpack",
+    "build": "webpack --mode production",
     "start": "webpack-dev-server --output-public-path=/dist/"
   },
   "author": "",
