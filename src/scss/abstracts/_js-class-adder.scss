@@ -1,10 +1,16 @@
 .logo-mouseover {
-    transform: scale(0.85);
-    // box-shadow: -4px -4px 44px;
-
+  transform: scale(0.85);
+  // box-shadow: -4px -4px 44px;
 }
 
 .nav-click {
-    transform: scale(1.5);
+  transform: scale(1.5);
+}
 
+.contentLoaded {
+  display: block;
+}
+
+.contentNotLoaded {
+  display: none;
 }

@@ -10,10 +10,10 @@ particlesJS.load('particles-js', '../../dist/assets/particles.json', function ()
 
 
 
+  window.addEventListener("load", function(event) {
+		domElements.body.classList.remove("contentNotLoaded");
 
-
-
-
+  });
 
 
 
