@@ -4,14 +4,23 @@ import { domElements } from "./base";
 
 //  ------------- PARTICLES ---------------
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load('particles-js', '../../dist/assets/particles.json', function () {
-	console.log('callback - particles.js config loaded');
-});
+
 
 
 
   window.addEventListener("load", function(event) {
-		domElements.body.classList.remove("contentNotLoaded");
+		// domElements.body.classList.remove("contentNotLoaded");
+		// domElements.body.classList.add("contentLoaded");
+		domElements.portCont.classList.remove("contentNotLoaded");
+		domElements.aboutCont.classList.remove("contentNotLoaded");
+		domElements.contactCont.classList.remove("contentNotLoaded");
+
+
+
+
+		particlesJS.load('particles-js', '../../dist/assets/particles.json', function () {
+	console.log('callback - particles.js config loaded');
+});
 
   });
 

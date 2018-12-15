@@ -15,7 +15,7 @@
 </head>
     <!-- css 288time 293size    -  js 274size 98time  html 23time  overall load 641ms   LOADING within js-->
     <!-- css419+62 294size     -  js  273size 191time html 16time  overall load 1.08s 20reqs, 42.9kb LOADING stlyes on its own -->
-<body class="contentNotLoaded">
+<body >
 
 
 
@@ -101,7 +101,7 @@
     <!-- PORTFOLIO -- -->
     <!-- Same nav and home btn at the top.. Add grid system with boxes for projects.. new background.. -->
 
-    <section class="portfolio hidden">
+    <section class="portfolio hidden contentNotLoaded">
         <div class="portfolio__projects-container">
             <div class="portfolio__projects-container__boxes-container">
                 <div class="portfolio__projects-container__box-1 box">
@@ -115,7 +115,9 @@
                         <i id="portfolio-github-icon" class="fab fa-github portfolio-icon" aria-hidden="true"></i>
                     </a>
                     <div class="portfolio__projects-container__box-1__text-container">
-                        <h3>Text about the project</h3>
+                        <h3>Movie search app built with react, using moviedb API.</h3>
+                        <hr/>
+                        <h3>React | SASS </h3>
                     </div>
                     <div class="portfolio__projects-container__box-1__left-arrow">
 
@@ -177,7 +179,7 @@
 
     <!-- ABOUT  -->
 
-    <section class="about hidden">
+    <section class="about hidden contentNotLoaded">
         <div class="about__image">
             <img src="dist/img/PicsArt_08-18-12.15.14.jpg" alt="">
         </div>
@@ -200,7 +202,7 @@
     <!-- CONTACT -->
 
 
-    <section class="contact hidden">
+    <section class="contact hidden contentNotLoaded">
         <div class="contact__form-container">
             <form action="">
                 <input type="text" name="" id="" placeholder="Name">
