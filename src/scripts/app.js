@@ -7,7 +7,6 @@ import { domElements } from "./base";
 
 
 
-
   window.addEventListener("load", function(event) {
 		// domElements.body.classList.remove("contentNotLoaded");
 		// domElements.body.classList.add("contentLoaded");
