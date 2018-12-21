@@ -2,21 +2,19 @@ import "../scss/main.scss";
 
 import { domElements } from "./base";
 
-//  ------------- PARTICLES ---------------
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 
 
 
   window.addEventListener("load", function(event) {
-		// domElements.body.classList.remove("contentNotLoaded");
-		// domElements.body.classList.add("contentLoaded");
+		// make listed "pages" seeable only when everythings loaded.
 		domElements.portCont.classList.remove("contentNotLoaded");
 		domElements.aboutCont.classList.remove("contentNotLoaded");
 		domElements.contactCont.classList.remove("contentNotLoaded");
 
 
 
-
+//  ------------- PARTICLES ---------------
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 		particlesJS.load('particles-js', '../../dist/assets/particles.json', function () {
 	console.log('callback - particles.js config loaded');
 });
@@ -80,7 +78,6 @@ import { domElements } from "./base";
 		// Get targets id and targets parent id (fixes border/edges prob)
 		let targetParentId = e.target.parentElement.getAttribute("id");
 		let targetId = e.target.getAttribute("id");
-		console.log(e.target);
 		// Add hidden, remove shown on every page
 		hidePages();
 		// Hide(move down) home/header text

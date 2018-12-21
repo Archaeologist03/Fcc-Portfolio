@@ -9,9 +9,35 @@
   overflow: hidden;
 
   &__projects-container {
+    max-width: 100%;
     border: 4px solid red;
-    margin: 15rem 3rem;
-    height: 50%;
+    margin: 7rem 3rem;
+    height: 75%;
+    display: flex;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 5%;
+
+    ::-webkit-scrollbar {
+      width: 4px;
+      background: rgba(233, 210, 82, 0.082);
+    }
+
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 4px rgba(224, 192, 49, 0.226);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0 0 6px rgba(245, 10, 167, 0.932);
+    }
+
+    @media (min-width: 400px) {
+      margin: 15rem 3rem;
+      height: 50%;
+      overflow: hidden;
+    }
 
     &__boxes-container {
       display: inline-block;
@@ -19,16 +45,32 @@
       height: 100%;
       border: 3px solid green;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-around;
+      overflow: hidden;
+      overflow-y: scroll;
+
+      @media (min-width: 400px) {
+        display: flex;
+        justify-content: space-around;
+        overflow: hidden;
+      }
     }
 
     .box {
       border: 2px solid blue;
-      width: 33%;
-      height: 80%;
+      width: 100%;
+      height: 45%;
       overflow: hidden;
       display: inline-block;
+      border-radius: 5%;
+
+      &:not(:last-child) {
+        margin-bottom: 10%;
+      }
+
+      @media (min-width: 400px) {
+        width: 33%;
+        height: 80%;
+      }
     }
 
     &__box-1 {
@@ -40,10 +82,14 @@
       &__picture {
         display: block;
         width: 100%;
-        height: 85%;
+        height: 80%;
         opacity: 0.8;
         transition: 0.5s ease-out;
         backface-visibility: hidden;
+
+        @media (min-width: 400px) {
+          height: 85%;
+        }
 
         .box:hover & {
           opacity: 0.95;
@@ -58,25 +104,35 @@
         // transform: scale(1.1);
         filter: blur(0px);
         position: absolute;
-        top: 65%;
+        top: 45%;
         // left: 50%;
-        opacity: 0.75;
 
+        @media (min-width: 400px) {
+          top: 65%;
+          opacity: 0.75;
+        }
       }
 
       #portfolio-globe-icon {
-        left: 73%;
+        left: 35%;
+
+        @media (min-width: 400px) {
+          left: 73%;
+        }
       }
 
       #portfolio-github-icon {
-        left: 85%;
+        left: 50%;
+
+        @media (min-width: 400px) {
+          left: 85%;
+        }
       }
 
       .portfolio-icon:hover {
         color: $color-icons-pink;
         animation: iconMovement 1s ease-out;
         opacity: 0.95;
-        
       }
 
       .portfolio-icon:active {
@@ -84,10 +140,14 @@
       }
 
       &__text-container {
-        border: 5px solid wheat;
+        border: 2px solid wheat;
         width: 100%;
-        height: 15%;
+        height: 20%;
         color: white;
+
+        @media (min-width: 400px) {
+          height: 15%;
+        }
       }
     }
   }
