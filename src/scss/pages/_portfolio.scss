@@ -10,8 +10,9 @@
 
   &__projects-container {
     max-width: 100%;
+    width: 95%;
+    margin: 7rem auto;
     border: 4px solid red;
-    margin: 7rem 3rem;
     height: 75%;
     display: flex;
     overflow: hidden;
@@ -33,7 +34,12 @@
       -webkit-box-shadow: inset 0 0 6px rgba(245, 10, 167, 0.932);
     }
 
-    @media (min-width: 400px) {
+    @media (min-width: 550px) {
+      margin: 15rem 3rem;
+      height: 40%;
+      overflow: hidden;
+    }
+    @media (min-width: 750px) {
       margin: 15rem 3rem;
       height: 50%;
       overflow: hidden;
@@ -48,7 +54,7 @@
       overflow: hidden;
       overflow-y: scroll;
 
-      @media (min-width: 400px) {
+      @media (min-width: 550px) {
         display: flex;
         justify-content: space-around;
         overflow: hidden;
@@ -67,7 +73,12 @@
         margin-bottom: 10%;
       }
 
-      @media (min-width: 400px) {
+      @media (min-width: 550px) {
+        width: 33%;
+        height: 60%;
+      }
+
+      @media (min-width: 750px) {
         width: 33%;
         height: 80%;
       }
@@ -87,7 +98,7 @@
         transition: 0.5s ease-out;
         backface-visibility: hidden;
 
-        @media (min-width: 400px) {
+        @media (min-width: 550px) {
           height: 85%;
         }
 
@@ -107,7 +118,12 @@
         top: 45%;
         // left: 50%;
 
-        @media (min-width: 400px) {
+        @media (min-width: 550px) {
+          top: 40%;
+          opacity: 0.9;
+        }
+
+        @media (min-width: 750px) {
           top: 65%;
           opacity: 0.75;
         }
@@ -116,17 +132,32 @@
       #portfolio-globe-icon {
         left: 35%;
 
-        @media (min-width: 400px) {
+        @media (min-width: 550px) {
+          left: 25%;
+        }
+
+        @media (min-width: 750px) {
           left: 73%;
+        }
+
+        @media (min-width: 950px) {
+          left: 60%;
         }
       }
 
       #portfolio-github-icon {
         left: 50%;
 
-        @media (min-width: 400px) {
+        
+        @media (min-width: 550px) {
+          left: 55%;
+        }
+
+        @media (min-width: 750px) {
           left: 85%;
         }
+
+
       }
 
       .portfolio-icon:hover {
@@ -145,7 +176,7 @@
         height: 20%;
         color: white;
 
-        @media (min-width: 400px) {
+        @media (min-width: 401px) {
           height: 15%;
         }
       }
