@@ -1,4 +1,4 @@
-***How to Use(start)
+### How to Use(start)
 
 1. Clone repo
 2. Run `npm install`
@@ -13,7 +13,7 @@
 
 
 
-***** Notes (todos):
+##### Notes (todos):
 - responsive images..(home background size!)
 - smaller size gif(resize?)
 - mo.js implement
