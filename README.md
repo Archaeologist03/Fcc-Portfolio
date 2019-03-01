@@ -1,4 +1,19 @@
-Notes:
+***How to Use(start)
+
+1. Clone repo
+2. Run `npm install`
+3. Run `npm start`
+
+
+
+
+
+
+
+
+
+
+***** Notes (todos):
 - responsive images..(home background size!)
 - smaller size gif(resize?)
 - mo.js implement
